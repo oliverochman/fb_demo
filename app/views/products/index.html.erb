@@ -1,17 +1,17 @@
 <body>
+    <h1>Test</h1>
     <% if current_user %>
         Logged in as:
         <strong>
           <%= current_user.email %>
         </strong>
         <%= link_to 'Logout', destroy_user_session_path, method: :delete%>
+        <% @products.each do |product|%>
+            <h2><%= product.name %> </h2>  
+            <p><%= product.details %> </p>      
+        <% end %>
     <% else %>
       <%= link_to 'Sign up', new_user_registration_path%>
       <%= link_to 'Login', new_user_session_path%>
      <% end %>
-    <div>Test</div>
-    <% @products.each do |product|%>
-        <h2><%= product.name %> </h2>  
-        <p><%= product.details %> </p>      
-    <% end %>
 </body>
