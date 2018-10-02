@@ -42,6 +42,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
+  gem 'cucumber-rails', '~> 1.6', require: false
+  gem 'database_cleaner'
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
 end
 
 group :development do
