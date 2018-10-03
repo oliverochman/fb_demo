@@ -91,7 +91,10 @@ Devise.setup do |config|
   config.skip_session_storage = [:http_auth]
 
 
-  config.omniauth :facebook
+  config.omniauth :facebook,
+    Rails.application.credentials.facebook[:app_key],
+    Rails.application.credentials.facebook[:app_sercet]
+
   # By default, Devise cleans up the CSRF token on authentication to
   # avoid CSRF token fixation attacks. This means that, when using AJAX
   # requests for sign in and sign up, you need to get a new CSRF token
