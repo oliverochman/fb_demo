@@ -93,7 +93,7 @@ Devise.setup do |config|
 
   config.omniauth :facebook,
     Rails.application.credentials.facebook[:app_key],
-    Rails.application.credentials.facebook[:app_sercet]
+    Rails.application.credentials.facebook[:app_secret]
 
   # By default, Devise cleans up the CSRF token on authentication to
   # avoid CSRF token fixation attacks. This means that, when using AJAX
