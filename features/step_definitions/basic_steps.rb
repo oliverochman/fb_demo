@@ -7,7 +7,7 @@ Given("I click {string}") do |link|
 end
 
 Then("I should be redirected to index page") do
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(current_path).to eq root_path
 end
 
 Then("I should see {string}") do |string|
