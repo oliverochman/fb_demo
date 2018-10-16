@@ -95,6 +95,12 @@ Devise.setup do |config|
     Rails.application.credentials.facebook[:app_key],
     Rails.application.credentials.facebook[:app_secret]
 
+  config.omniauth :google_oauth2, 
+    Rails.application.credentials.facebook[:google_key],
+    Rails.application.credentials.facebook[:google_secret]
+  
+  
+
   # By default, Devise cleans up the CSRF token on authentication to
   # avoid CSRF token fixation attacks. This means that, when using AJAX
   # requests for sign in and sign up, you need to get a new CSRF token
