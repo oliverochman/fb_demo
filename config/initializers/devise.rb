@@ -96,8 +96,8 @@ Devise.setup do |config|
     Rails.application.credentials.facebook[:app_secret]
 
   config.omniauth :google_oauth2, 
-    Rails.application.credentials.facebook[:client_id],
-    Rails.application.credentials.facebook[:client_secret]
+    Rails.application.credentials.google_oauth2[:client_id],
+    Rails.application.credentials.google_oauth2[:client_secret]
   
   
 
